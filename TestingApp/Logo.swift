@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Logo: View {
     var body: some View {
-        Image(systemName: "drop.fill")
+        Image(systemName: "bolt.fill")
             .resizable()
             .frame(width: 50, height: 80)
-            .foregroundStyle(Color.blue.opacity(0.7))
-            .shadow(color: Color.blue.opacity(1), radius: 10, x: -5, y: 5)
-            .shadow(color: Color.blue.opacity(1), radius: 10, x: 5, y: -5)
+            .foregroundStyle(Color.purple.opacity(0.7))
+            .shadow(color: Color.purple.opacity(1), radius: 10, x: -5, y: 5)
+            .shadow(color: Color.purple.opacity(1), radius: 10, x: 5, y: -5)
     }
 }
 
