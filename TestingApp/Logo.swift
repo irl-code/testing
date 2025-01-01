@@ -16,7 +16,8 @@ struct Logo: View {
             } label: {
                 Image(systemName: "heart.fill")
                     .resizable()
-                    .frame(width: 45, height: 40)
+                    .frame(width: 50, height: 45)
+                    .foregroundStyle(.red)
             }
             RoundedRectangle(cornerRadius: 20)
                 .foregroundStyle(Color.gray.opacity(0.4))
@@ -39,7 +40,7 @@ struct Logo: View {
             
                 .padding()
         }
-        .padding(.top, 50)
+        .padding(.top, 20)
         
     }
 }
