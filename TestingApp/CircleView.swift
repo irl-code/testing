@@ -9,23 +9,28 @@ import SwiftUI
 
 struct CircleView: View {
     @State var name: String = ""
+    @State var isSignedUp: Bool = false
     var body: some View {
         
         RoundedRectangle(cornerRadius: 10)
             .foregroundStyle(.black.opacity(0.2))
             .frame(width: 350, height: 250)
             .overlay {
-                VStack(alignment: .leading){
-                    Text("Enter Name")
-                    TextField("Enter your name", text: $name)
-                        .padding(.all, 5)
+                if isSignedUp {
+                    Text("Successfully signed up!")
+                       // .font(.headline)
+                        .font(.system(size: 25))
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding(.all, 10)
+                        .padding(.horizontal, 5)
                         .background(
+                            Color.white.cornerRadius(10)
                         )
                 }
-                .padding(.horizontal)
             }
         Button {
-            // code
+            isSignedUp.toggle()
         } label: {
             Text("sign up".uppercased())
                 .foregroundStyle(.white)
