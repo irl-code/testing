@@ -37,17 +37,15 @@ struct Logo: View {
             
                 .overlay(
                     ZStack{
-                        Circle()
-                            .frame(width: 100, height: 100)
-//                        if isLove {
-//                            Text("I Love You!")
-//                                .foregroundStyle(Color.red)
-//                                .font(.largeTitle)
-//                                .fontWeight(.bold)
-//                                .multilineTextAlignment(.center)
-//                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: 5, y: -5)
-//                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: -5, y: 5)
-//                        }
+                       if isLove {
+                            Text("I Love You!")
+                                .foregroundStyle(Color.red)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: 5, y: -5)
+                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: -5, y: 5)
+                        }
                     }
                     
                         // code
