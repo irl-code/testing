@@ -24,6 +24,21 @@ struct CircleView: View {
                 }
                 .padding(.horizontal)
             }
+        Button {
+            // code
+        } label: {
+            Text("sign up".uppercased())
+                .foregroundStyle(.white)
+                .font(.headline)
+                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity)
+                .padding(.all, 10)
+                .background(Color.blue.cornerRadius(10))
+                .padding(.horizontal)
+                .padding(.top, 20)
+                
+        }
+
         
     }
 }
