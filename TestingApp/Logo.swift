@@ -19,6 +19,14 @@ struct Logo: View {
                     .frame(width: 50, height: 45)
                     .foregroundStyle(.red)
             }
+            Button{
+                // code
+            } label: {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundStyle(.orange)
+                    .font(.title)
+            }
+            .padding()
             Button("Click here") {
                 // code
             }
