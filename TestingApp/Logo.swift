@@ -19,6 +19,11 @@ struct Logo: View {
                     .frame(width: 50, height: 45)
                     .foregroundStyle(.red)
             }
+            Button("Click here") {
+                // code
+            }
+            .foregroundStyle(Color.green)
+            .font(.title)
             RoundedRectangle(cornerRadius: 20)
                 .foregroundStyle(Color.gray.opacity(0.4))
             
