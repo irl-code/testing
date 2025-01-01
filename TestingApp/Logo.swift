@@ -11,51 +11,50 @@ struct Logo: View {
     @State var isLove: Bool = false
     var body: some View {
         VStack{
-            Button {
-                isLove.toggle()
-            } label: {
-                Image(systemName: "house.fill")
-                    .resizable()
-                    .frame(width: 50, height: 45)
-                    .foregroundStyle(.red)
-            }
-            Button{
-                // code
-            } label: {
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundStyle(.orange)
-                    .font(.title)
-            }
-            .padding()
-            Button("Click here") {
-                // code
-            }
-            .foregroundStyle(Color.green)
-            .font(.title)
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(Color.gray.opacity(0.4))
-            
+            RoundedRectangle(cornerRadius: 30)
+                .foregroundStyle(.gray.opacity(0.3))
                 .overlay(
-                    ZStack{
-                       if isLove {
-                            Text("I Love You!")
-                                .foregroundStyle(Color.red)
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .multilineTextAlignment(.center)
-                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: 5, y: -5)
-                                .shadow(color: Color.red.opacity(1.0), radius: 30, x: -5, y: 5)
+                    VStack {
+                        HStack{
+                            Button {
+                                // code
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundStyle(.black)
+                                    .font(.title)
+                                
+                            }
+                            Spacer()
                         }
+                        .padding()
+                        Spacer()
+                        Image(systemName: "checkmark.circle.fill")
+                            .resizable()
+                            .frame(
+                                width: isLove ? 100 : 200, height: isLove ? 100 : 200
+                            )
+                            .foregroundStyle(isLove ? Color(#colorLiteral(red: 0.004859850742, green: 0.09608627111, blue: 0.5749928951, alpha: 1)) : Color(#colorLiteral(red: 1, green: 0.2527923882, blue: 1, alpha: 1)))
+                            .padding(.bottom, 270)
+                            .animation(.easeIn(duration: 0.5))
                     }
-                    
-                        // code
-                )
-            
-                .padding()
+                    )
+                Button("Switch Color"){
+                    isLove.toggle()
+                }
+                    .foregroundStyle(.white)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .padding()
+                    .padding(.horizontal)
+                    .background(
+                        isLove ? Color.blue.opacity(1.0) : Color.blue.opacity(0.5)
+                    )
+                    .cornerRadius(10)
+                    .padding()
         }
-        .padding(.top, 20)
-        
+        .padding()
     }
+
 }
 
 #Preview {
