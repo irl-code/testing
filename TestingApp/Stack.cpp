@@ -13,4 +13,5 @@ class Stack {
     int* stack;
 public:
     Stack(const int size): capacity(size), top(-1), stack(new int[capacity]){}
+    bool isEmpty() const {return top == -1;}
 };
