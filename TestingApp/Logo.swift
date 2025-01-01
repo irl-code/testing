@@ -14,7 +14,7 @@ struct Logo: View {
             Button {
                 isLove.toggle()
             } label: {
-                Image(systemName: "heart.fill")
+                Image(systemName: "house.fill")
                     .resizable()
                     .frame(width: 50, height: 45)
                     .foregroundStyle(.red)
