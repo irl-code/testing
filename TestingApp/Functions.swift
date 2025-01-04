@@ -8,7 +8,9 @@
 import Foundation
 
 var name: String = "Hamza Wahab"
+var age: Int = 20
 
-func getName() -> (String, Int) {
-    return (name, 24)
+func getNameAndAge() -> (String, Int) {
+    return (name, age)
 }
+
