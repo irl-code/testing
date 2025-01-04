@@ -30,7 +30,7 @@ struct CircleView: View {
                 }
             }
         Button {
-            isSignedUp.toggle()
+            isSignedUp = true
         } label: {
             Text("sign up".uppercased())
                 .foregroundStyle(.white)
