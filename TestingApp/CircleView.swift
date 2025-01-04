@@ -25,7 +25,7 @@ struct CircleView: View {
                         .padding(.all, 10)
                         .padding(.horizontal, 5)
                         .background(
-                            Color.white.cornerRadius(10)
+                            Color.white.opacity(0.7).cornerRadius(10)
                         )
                 }
             }
