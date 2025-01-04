@@ -35,7 +35,6 @@ struct Logo: View {
                             )
                             .foregroundStyle(isLove ? Color(#colorLiteral(red: 0.004859850742, green: 0.09608627111, blue: 0.5749928951, alpha: 1)) : Color(#colorLiteral(red: 1, green: 0.2527923882, blue: 1, alpha: 1)))
                             .padding(.bottom, 270)
-                            .animation(.easeIn(duration: 0.5))
                     }
                     )
                 Button("Switch Color"){
